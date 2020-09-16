@@ -3,6 +3,10 @@ console.log("Lexa deserved better");
 $(document).ready(function () {
   // VARIABLES
   var currentsWeather = $("#current-weather");
+  var cityInfo = $("city-info");
+  var cityInput = $("#search-input");
+
+  //   Momentsjs used for the weather cards
   var day1 = moment().add(1, "days").format("dddd");
   var day2 = moment().add(2, "days").format("dddd");
   var day3 = moment().add(3, "days").format("dddd");
@@ -13,21 +17,17 @@ $(document).ready(function () {
   console.log(day3);
   console.log(day4);
   console.log(day5);
-  // ARRAY
-
-  // MOMENTJS
 
   dayDate = moment().format("MMM Do, YYYY");
   console.log(dayDate);
 
   // AJAX
-  var cityInfo = $("city-info");
-
-  var cityInput = $("#search-input");
 
   var APIKey = "73fcefd7f234ef273afab158599dbe69";
 
+  //   On"click" for the search button
   $("#search-button").on("click", function () {
+    //   if there is an icon in the cards, this will remove it when the user enters a new city
     $(".icon").empty();
     console.log("you searched for me");
     console.log(cityInput.val());
@@ -36,6 +36,7 @@ $(document).ready(function () {
     console.log(cityWeather);
 
     // CURRENT DAY WEATHER AJAX
+    // I was having problems with the AJAX as a variable, so I decided to put them directly into the AXAJ function
     $.ajax({
       url:
         "https://api.openweathermap.org/data/2.5/weather?q=" +
@@ -46,15 +47,17 @@ $(document).ready(function () {
       method: "GET",
     }).then(function (response) {
       console.log(response);
-      // $("#current-weather").append(response.namedayDate);
+      // dynamically generating the information to the 5 day forecast cards
       $("#city-info").text(response.name + " " + "(" + dayDate + ")");
       $("#temp").text("Temperature: " + response.main.temp + "℉");
       $("#humidity").text("Humidity: " + response.main.humidity + "%");
       $("#wind-speed").text("Wind Speed: " + response.wind.speed + " MPH");
 
+      //   variables for the latitude and longitude
       var lat = response.coord.lat;
       var lon = response.coord.lon;
 
+      //   AJAX for the UV index
       $.ajax({
         url:
           "https://api.openweathermap.org/data/2.5/uvi?appid=" +
@@ -67,6 +70,7 @@ $(document).ready(function () {
         console.log(response);
 
         $("#uv-index").text("UV Index: " + response.value);
+        // this is supposed to turn the UV index a certain color depending on how high it is
         if (response.value < 5) {
           $("#uv-index").addClass("yellow-uv");
         } else if (response.value >= 5 && response.value <= 8) {
