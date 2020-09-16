@@ -3,10 +3,16 @@ console.log("Lexa deserved better");
 $(document).ready(function () {
   // VARIABLES
   var currentsWeather = $("#current-weather");
-  var day1 = moment().add(1, "days").calendar();
-  var day2 = moment().add(2, "days").calendar();
+  var day1 = moment().add(1, "days").format("dddd");
+  var day2 = moment().add(2, "days").format("dddd");
+  var day3 = moment().add(3, "days").format("dddd");
+  var day4 = moment().add(4, "days").format("dddd");
+  var day5 = moment().add(5, "days").format("dddd");
   console.log(day1);
   console.log(day2);
+  console.log(day3);
+  console.log(day4);
+  console.log(day5);
   // ARRAY
 
   // MOMENTJS
@@ -81,7 +87,7 @@ $(document).ready(function () {
       $("#uv-index").text("UV Index: ");
 
       // DAY 1
-      $(".card-date").text(response.list[4].dt_txt);
+      $(".card-date-1").text(day1);
       $(".card-icon-1").append(
         $("<img>").attr(
           "src",
@@ -96,7 +102,7 @@ $(document).ready(function () {
       );
 
       // DAY 2
-      $(".card-date").text(response.list[12].dt_txt);
+      $(".card-date-2").text(day2);
       $(".card-icon-2").append(
         $("<img>").attr(
           "src",
@@ -111,7 +117,7 @@ $(document).ready(function () {
       );
 
       // DAY 3
-      $(".card-date").text(response.list[20].dt_txt);
+      $(".card-date-3").text(day3);
       $(".card-icon-3").append(
         $("<img>").attr(
           "src",
@@ -126,7 +132,7 @@ $(document).ready(function () {
       );
 
       // DAY 4
-      $(".card-date").text(response.list[28].dt_txt);
+      $(".card-date-4").text(day4);
       $(".card-icon-4").append(
         $("<img>").attr(
           "src",
@@ -141,7 +147,7 @@ $(document).ready(function () {
       );
 
       // DAY 5
-      $(".card-date").text(response.list[36].dt_txt);
+      $(".card-date-5").text(day5);
       $(".card-icon-5").append(
         $("<img>").attr(
           "src",

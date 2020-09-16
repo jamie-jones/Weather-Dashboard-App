@@ -12,4 +12,8 @@ Thank you so much to the other students in the Bootcamp with me, who spend hours
 
 ## Layout
 
-Official Site:
+Official Site: https://jamjon94.github.io/Weather-Dashboard-App/
+
+Here's what to expect!
+
+!
