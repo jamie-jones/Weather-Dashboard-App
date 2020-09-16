@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css"></style>
+  </head>
+  <body>
+    <nav class="navbar navbar-nav navbar-dark bg-dark">
+        <h1 class="navbar-words navbar-center"> WEATHER DASHBOARD</h1>
+    </nav>
+    <!-- ENTIRE CONTAINER -->
+    <main class="content">
+        <div class="container">
+            <!-- ROW WITH SEARCH AND CURRENT DAY WEATHER -->
+            <article class="row">
+                <!-- SEARCH SECTION -->
+                <section class="col-sm-4 input-group">
+                    <h3 class="search-top">Search for a city:</h3>
+                    <div class="input-group mb-3">
+                        <input type="search" class="form-control" id="search-input" placeholder="Enter a city name">
+                        <div class="input-group-append">
+                          <button class="btn btn-primary" type="button" id="search-button">Button</button>
+                        </div>
+                      </div>
+                </section>
+                <!-- CURRENT WEATHER SECTION -->
+                <section class="col-sm-8 current-weather-cont" id="current-weather">
+                    <h4 id="city-info">Enter a city to see its weather information.</h4>
+                    <ul>
+                        <ol id="temp"></ol>
+                        <ol id="humidity"></ol>
+                        <ol id="wind-speed"></ol>
+                        <ol id="uv-index"></ol>
+                    </ul>
+                </section>
+            </article>
+            <!-- SECOND ROW WITH 5 DAY FORECAST TITLE -->
+            <article class="row">
+                <!-- EMPTY SPACE -->
+                <section class="col-sm-4"></section>
+                <section class="col-sm-8" style="text-align: center;">5 DAY WEATHER FORECAST</section>
+            </article>
+            <!-- THIRD ROW FOR ACTUAL WEATHER CARDS -->
+            <article class="row">
+                <!-- EMPTY SPACE -->
+                <section class="col-sm-4"></section>
+                <section class="col-sm-8">
+                    <!-- INNER ROW FOR THE CARS -->
+                    <div class="row">
+                        <div class="card text-white bg-primary mb-3 col-sm-3" style="max-width: 18rem;">
+                            <div class="card-date"></div>
+                            <div class="card-body">
+                              <p class="icon card-icon-1"></p>
+                              <p class="card-temp-1"></p>
+                              <p class="card-humidity-1"></p>
+                            </div>
+                          </div>
+                          <div class="card text-white bg-primary mb-3 col-sm-3" style="max-width: 18rem;">
+                            <div class="card-date"></div>
+                            <div class="card-body">
+                              <p class="icon card-icon-2"></p>
+                              <p class="card-temp-2"></p>
+                              <p class="card-humidity-2"></p>
+                            </div>
+                          </div>
+                          <div class="card text-white bg-primary mb-3 col-sm-3" style="max-width: 18rem;">
+                            <div class="card-date"></div>
+                            <div class="card-body">
+                              <p class="icon card-icon-3"></p>
+                              <p class="card-temp-3"></p>
+                              <p class="card-humidity-3"></p>
+                            </div>
+                          </div>
+                          <div class="card text-white bg-primary mb-3 col-sm-3" style="max-width: 18rem;">
+                            <div class="card-date"></div>
+                            <div class="card-body">
+                              <p class="icon card-icon-4"></p>
+                              <p class="card-temp-4"></p>
+                              <p class="card-humidity-4"></p>
+                            </div>
+                          </div>
+                          <div class="card text-white bg-primary mb-3 col-sm-3" style="max-width: 18rem;">
+                            <div class="card-date"></div>
+                            <div class="card-body">
+                              <p class="icon card-icon-5"></p>
+                              <p class="card-temp-5"></p>
+                              <p class="card-humidity-5"></p>
+                            </div>
+                          </div>
+                        <!-- <div class="col-sm-2 " style="background-color: darkgrey; float: left; text-align: center;">bitch</div> -->
+                        <!-- <div class="col-sm-2" style="background-color: green; float: left; text-align: center;">ass</div> -->
+                        <!-- <div class="col-sm-2"  style="background-color: coral; text-align: center;">cunt</div> -->
+                        <!-- <div class=col-sm-2 style="background-color: darkred; text-align: center;">Hello</div> -->
+                        <!-- <div class="col-sm-2" style="background-color: darkviolet; text-align: center;">i hate this</div> -->
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./weather.js" ></script>
+  </body>
+</html>

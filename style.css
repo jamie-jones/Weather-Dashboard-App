@@ -1,0 +1,31 @@
+.navbar-words {
+  color: white;
+  text-align: center;
+}
+
+.input-group {
+  background-color: gainsboro;
+}
+
+.yello-uv {
+  background-color: greenyellow;
+}
+
+.orange-uv {
+  background-color: yellow;
+}
+
+.red-uv {
+  background-color: red;
+}
+
+#city-info {
+  text-align: center;
+}
+.current-weather-cont {
+  background-color: paleturquoise;
+}
+.content {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
